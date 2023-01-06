@@ -14,18 +14,40 @@
 		<div class="campo-escrita">
 			<textarea cols="70" rows="10" id="mensagem" placeholder="Digite seu texto"></textarea>
 		</div>
-		<input type="button" id="botao" value="Criptografar" onclick="cripto()"> 
 
-		<button id="botao" onclick="descripto()">Descriptografar</button>
+		<div id="botao_id">
+			<button class="botao_class" onclick="cripto()">Criptografar</button> 
+
+			<button class="botao_class" onclick="descripto()">Descriptografar</button>
+		</div>
 
 		<script>
 			
 			
-			window.alert(input)
+			
 
 			function cripto(){
 				var oi = window.document.getElementById("mensagem").value;
-				window.alert(oi);
+				/*var msg = oi.replace(/a/g, ".ai.");
+				var msg = msg.replace(/e/g, ".enter.");
+				var msg = msg.replace(/i/g, ".imes.");
+				var msg = msg.replace(/o/g, ".obter.");
+				var msg = msg.replace(/u/g, ".ufat.");*/
+
+				
+
+				for(var i=0; i <= oi.length-1; i++){
+					var letra = oi[i];
+					letra = letra.replace("a", ".ai.");
+					letra = letra.replace("e", ".enter.");
+					/*if(letra == 'a'){
+						letra = oi.replace(a, ".ai.");
+						window.alert(letra);
+					}*/
+					
+				}
+				/*console.log(letra.length);*/
+
 			}
 			
 			function descripto(){
