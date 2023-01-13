@@ -4,31 +4,30 @@
 		<meta charset="UTF-8">
 		<title>Decodificador de Texto</title>
 
+		<link rel="stylesheet" href="reset.css">
+
 		<link rel="stylesheet" href="style.css">
 
 	</head>
 
 	<body>
-		<div class="campo-escrita">
-			<textarea cols="70" rows="10" id="mensagem" placeholder="Digite seu texto"></textarea>
-		</div>
 
-		<div id="botao_id">
-			<button class="botao_class" onclick="cripto()">Criptografar</button> 
+		
+			<textarea id="mensagem" placeholder="Digite seu texto"></textarea>
+		
 
-			<button class="botao_class" onclick="descripto()">Descriptografar</button>
-		</div>
+		
+			<button id="botao_cripto" onclick="cripto()">Criptografar</button> 
 
-		<div class="resultado">
-			<textarea cols="70" rows="10" id="mensagem-resultado">
-				
-			</textarea>
+			<button id="botao_descripto" onclick="descripto()">Descriptografar</button>
+		
+
+		<div class="campo_resultado">
+			<textarea  id="mensagem_resultado" placeholder="Nenhuma mensagem encontrada."></textarea>
 		</div>
 
 		<script>
 			
-			
-
 			function cripto(){
 				var mensagem = window.document.getElementById("mensagem").value;
 		
@@ -38,8 +37,8 @@
 						.replace(/o/g, "ober")
 						.replace(/u/g, "ufat")
 					
-
-				document.querySelector("#mensagem-resultado").innerHTML = msg_cripto;
+						
+				document.querySelector("#mensagem_resultado").innerHTML = msg_cripto;
 			}
 			
 			function descripto(){
@@ -52,11 +51,8 @@
 						.replace(/ober/g, "o")
 						.replace(/ufat/g, "u")
 				
-				document.querySelector("#mensagem-resultado").innerHTML = msg_descripto;
-				
-				
+				document.querySelector("#mensagem_resultado").innerHTML = msg_descripto;
 			}
-
 		</script>
 	</body>
 </html>	
