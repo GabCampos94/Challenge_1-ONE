@@ -1,77 +1,93 @@
-body{
-	background-color: #E5E5E5;
-}
-
-#mensagem{
-	position: absolute; left: 240px; top: 168px;
-	
-		
-	width: 680px;
-	height: 288px;
-
-	font-family: 'Inter';
-	font-style: normal;
+*{
+	background: #E5E5E5;		
+	font-family: 'Inter', sans-serif;
 	font-weight: 400;
 	font-size: 32px;
 	line-height: 150%;
-	color: #0A3871;
+}
 
+#logoAlura{
+	margin-left: 10px;
+	padding-top: 10px;
+	width: 2%;
+}
+
+main{
+	display: flex;					/* Permite que as sections fiquem lado a lado*/
+	margin-bottom: 50px;
+	margin-left: 80px;
+}
+
+#mensagem{
+	border: none;
+	color: #0A3871;
+	margin-top: 90px;
+}
+
+::placeholder {color: #0A3871;}   /* Define cor para o placeholder no carregamento da page */
+	#mensagem:focus{				/* Ao clicar no campo mensagem, continua sem borda */	
+		outline: none;		
 	}
 
-#mensagem_resultado{
-	position: absolute; left: 1000px; top: 40px; bottom: 40px;
-	width: 400px;
-	height: 844px;
+#mensagem_resultado {
 	background: #FFFFFF;
-
-	padding: 32px 32px 131px 32px;
-	box-sizing: border-box;
-
-	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-	border-radius: 32px;
-}
-
-#mensagem_resultado{
-	position: absolute;
-	width: 336px;
-	height: 781px;
-	left: 1032px;
-	top: 72px;
-
-	float: right;
-
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 24px;
-	line-height: 150%;
-
-	color: #495057;
-}
-
-
-#botao_cripto{
-	position: absolute;
-	margin: top:885px; right:872px; bottom:72px; left:240px;
-	
-	width: 328px;
-    height: 67px;
-	background: #0A3871;
+	background-image: url(/imagens/efeito.png);
+	background-repeat: no-repeat;
+	border: none;
 	border-radius: 24px;
-	font-style: normal;
-	font-size: 16px;
-	color: #FFFFFF;
+	color: #0A3871;
+	margin-left: 98px;
+	margin-top: 20px;
+	padding-left: 20px;
+	position: fixed;
 }
 
-#botao_descripto{
-	position: absolute;
-	margin: top: 885px; right:520px; bottom: 72px; left: 592px; 
+#mensagem_resultado:focus{
+	outline: none;
+}
 
-    width: 328px;
-    height: 67px;
-    background: #D8DFE8;
-    border: 1px solid #0A3871;
-    border-radius: 24px;
-    font-style: normal;
-    font-size: 16px;
+.botoes{
+	display: flex;
+	margin-top: 10px;
+	gap: 8px;
+	padding: 24px;
+}
+
+#botao_cripto {
+	background-color: #0A3871;
+	border 1px solid #0A3871;
+	border-radius: 24px;
+	color: #FFFFFF;
+	cursor: pointer;
+	height: 67px;
+	width: 328px;
+}
+
+#botao_descripto {
+	background: #D8DFE8;
+	border 1px solid #0A3871;
+	border-radius: 24px;
+	color: #0A3871;
+	cursor: pointer;
+	height: 67px;
+	margin-left: 30px;
+	width: 328px;
+}
+
+#botao_copiar {
+	border: 1px solid #0A3871;
+	border-radius: 24px;
+	color: #0A3871;
+	cursor: pointer;
+	height: 67px;
+	margin-left: 108px;
+	margin-top: 402px;
+	position: absolute;               /* absolute para deixar o elemento por cima */
+	width: 336px;
+
+}
+
+#orientacoes{
+	color: #495057;
+	font-size: 18px;
 }

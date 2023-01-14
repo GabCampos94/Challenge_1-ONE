@@ -1,58 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
-		<title>Decodificador de Texto</title>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Decodificador de Texto</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="style.css">
+</head>
 
-		<link rel="stylesheet" href="reset.css">
 
-		<link rel="stylesheet" href="style.css">
+<body>
 
-	</head>
+	<header>
+		<img id="logoAlura" src="/imagens/logoAlura.png" alt="Logo da Alura">
+	</header>
 
-	<body>
+	<main>
+		<section>
+			<textarea id="mensagem" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
+			
+			<div id="orientacoes">
+				<h6>Apenas letras minúsculas e sem acento</h6>
+			</div>
+			
+			<div class="botoes">
+				<button id="botao_cripto" onclick="cripto()">Criptografar</button> 
+				<button id="botao_descripto" onclick="descripto()">Descriptografar</button>
+			</div>
+		</section>	
 
+		<section>
+			<textarea  id="mensagem_resultado" cols="20" rows="10" placeholder="Nenhuma mensagem encontrada."></textarea>
+			<button id="botao_copiar">Copiar</button>
+		</section>
 		
-			<textarea id="mensagem" placeholder="Digite seu texto"></textarea>
-		
-
-		
-			<button id="botao_cripto" onclick="cripto()">Criptografar</button> 
-
-			<button id="botao_descripto" onclick="descripto()">Descriptografar</button>
-		
-
-		<div class="campo_resultado">
-			<textarea  id="mensagem_resultado" placeholder="Nenhuma mensagem encontrada."></textarea>
-		</div>
-
 		<script>
-			
-			function cripto(){
-				var mensagem = window.document.getElementById("mensagem").value;
-		
-				var msg_cripto = mensagem.replace(/e/g, "enter")
-						.replace(/i/g, "imes")
-						.replace(/a/g, "ai")
-						.replace(/o/g, "ober")
-						.replace(/u/g, "ufat")
-					
-						
-				document.querySelector("#mensagem_resultado").innerHTML = msg_cripto;
-			}
-			
-			function descripto(){
-				var mensagem = window.document.getElementById("mensagem").value;	
-
-
-				var msg_descripto =	mensagem.replace(/enter/g, "e")
-						.replace(/imes/g, "i")
-						.replace(/ai/g, "a")
-						.replace(/ober/g, "o")
-						.replace(/ufat/g, "u")
 				
-				document.querySelector("#mensagem_resultado").innerHTML = msg_descripto;
-			}
+				function cripto(){
+					var mensagem = window.document.getElementById("mensagem").value;
+			
+					var msg_cripto = mensagem.replace(/e/g, "enter")
+							.replace(/i/g, "imes")
+							.replace(/a/g, "ai")
+							.replace(/o/g, "ober")
+							.replace(/u/g, "ufat")
+						
+							
+					document.querySelector("#mensagem_resultado").innerHTML = msg_cripto;
+				}
+				
+				function descripto(){
+					var mensagem = window.document.getElementById("mensagem").value;	
+
+
+					var msg_descripto =	mensagem.replace(/enter/g, "e")
+							.replace(/imes/g, "i")
+							.replace(/ai/g, "a")
+							.replace(/ober/g, "o")
+							.replace(/ufat/g, "u")
+					
+					document.querySelector("#mensagem_resultado").innerHTML = msg_descripto;
+				}
 		</script>
-	</body>
+	</main>
+		
+</body>
 </html>	
