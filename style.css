@@ -1,9 +1,14 @@
-*{
+ *{
 	background: #E5E5E5;		
 	font-family: 'Inter', sans-serif;
-	font-weight: 400;
-	font-size: 32px;
-	line-height: 150%;
+	font-weight: 400;                /* Define o grau do negrito da fonte */  
+	
+	line-height: 150%;				 /* Define o espaçamento entre as linhas de um texto */
+} 
+
+
+body{
+	background-color: red ;
 }
 
 #logoAlura{
@@ -13,15 +18,20 @@
 }
 
 main{
-	display: flex;					/* Permite que as sections fiquem lado a lado*/
+	background-color: blue;
+	display: flex;
 	margin-bottom: 50px;
 	margin-left: 80px;
+	
 }
 
 #mensagem{
 	border: none;
 	color: #0A3871;
 	margin-top: 90px;
+	text-transform: lowercase;
+	font-size: 32px;
+	resize: none;
 }
 
 ::placeholder {color: #0A3871;}   /* Define cor para o placeholder no carregamento da page */
@@ -29,33 +39,36 @@ main{
 		outline: none;		
 	}
 
+
 #mensagem_resultado {
 	background: #FFFFFF;
 	background-image: url(/imagens/efeito.png);
+	background-position: center;
 	background-repeat: no-repeat;
 	border: none;
 	border-radius: 24px;
 	color: #0A3871;
 	margin-left: 98px;
-	margin-top: 20px;
+	height: 83%;
 	padding-left: 20px;
 	position: fixed;
+	font-size: 32px;
 }
 
 #mensagem_resultado:focus{
 	outline: none;
 }
 
+
 .botoes{
-	display: flex;
-	margin-top: 10px;
-	gap: 8px;
-	padding: 24px;
+	font-size: 12px;
+	
+	
 }
 
-#botao_cripto {
+#botao_cripto{
 	background-color: #0A3871;
-	border 1px solid #0A3871;
+	border: 1px solid #0A3871;
 	border-radius: 24px;
 	color: #FFFFFF;
 	cursor: pointer;
@@ -63,9 +76,9 @@ main{
 	width: 328px;
 }
 
-#botao_descripto {
+#botao_descripto{
 	background: #D8DFE8;
-	border 1px solid #0A3871;
+	border: 1px solid #0A3871;
 	border-radius: 24px;
 	color: #0A3871;
 	cursor: pointer;
@@ -74,20 +87,26 @@ main{
 	width: 328px;
 }
 
-#botao_copiar {
+#botao_copiar{
 	border: 1px solid #0A3871;
 	border-radius: 24px;
 	color: #0A3871;
 	cursor: pointer;
 	height: 67px;
-	margin-left: 108px;
-	margin-top: 402px;
-	position: absolute;               /* absolute para deixar o elemento por cima */
 	width: 336px;
 
+	margin-left: 110px;
+	margin-top: 590px;
+	padding-left: 20px;
+
+	position: absolute;   					/* absolute para deixar o elemento por cima */
+	
+
 }
 
-#orientacoes{
+.orientacoes{
 	color: #495057;
-	font-size: 18px;
+	font-size: 22px;
+	margin-top: 35%;
 }
+
