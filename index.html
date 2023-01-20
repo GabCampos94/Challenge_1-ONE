@@ -37,11 +37,20 @@
 			<section>
 				
 					<textarea id="mensagem_resultado" cols="20" rows="10"></textarea>	
-					<!--
-						<div class="msg_inicial">
-						<h1>Nenhuma mensagem <br> encontrada</h1>	
-						<p>Digite um texto que você deseja <br> criptografar ou descriptografar.</p>
-					</div> -->
+					
+					<div id="msg_inicial">
+						
+						<div id="imagem_inicial">							
+							<img id="imagem" src="/imagens/efeito.png" alt="imagem boneco pesquisando">
+						</div>
+
+
+						<div id="sub_mensagem_inicial">							
+							<h1>Nenhuma mensagem <br> encontrada</h1>	
+							<p>Digite um texto que você deseja <br> criptografar ou descriptografar.</p>
+						</div>
+												
+					</div> 
 								
 					<button class="botoes" id="botao_copiar" onclick="copiar()">Copiar</button>
 				
@@ -50,6 +59,20 @@
 					
 		<script>
 				function cripto(){
+					var targetDiv = document.getElementById("msg_inicial");
+					
+						if (targetDiv.style.display !== "none"){
+							targetDiv.style.display = "none";
+						} else {
+							targetDiv.style.display = "block";
+						}
+					
+					var targetBotton = document.getElementById("botao_copiar");	
+						if (targetBotton.style.position !== "absolute"){
+							targetBotton.style.position = "absolute";
+						}
+
+
 					var mensagem = window.document.getElementById("mensagem").value;
 					var msg_cripto = mensagem.replace(/e/g, "enter")
 							.replace(/i/g, "imes")
@@ -58,6 +81,10 @@
 							.replace(/u/g, "ufat")
 								
 					document.querySelector("#mensagem_resultado").innerHTML = msg_cripto;
+
+					
+
+
 				}
 				
 				function descripto(){
