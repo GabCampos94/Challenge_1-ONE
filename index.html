@@ -37,10 +37,13 @@
 			<section>
 				
 					<textarea id="mensagem_resultado" cols="20" rows="10"></textarea>	
-				<!--	<h1>Nenhuma mensagem encontrada</h1>	
-					<p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-					-->			
-					<button class="botoes" id="botao_copiar">Copiar</button>
+					<!--
+						<div class="msg_inicial">
+						<h1>Nenhuma mensagem <br> encontrada</h1>	
+						<p>Digite um texto que você deseja <br> criptografar ou descriptografar.</p>
+					</div> -->
+								
+					<button class="botoes" id="botao_copiar" onclick="copiar()">Copiar</button>
 				
 			</section>
 		</main>
@@ -69,8 +72,12 @@
 				}
 				
 				function copiar(){
-
-				}
+					let mensagem_copiada = document.getElementById("mensagem_resultado");
+					mensagem_copiada.select();    /* Função para selecionar todo o texto*/
+					
+					document.execCommand("copy"); /* Comando para copiar para a área de transferência */
+					
+				}	
 		</script>
 		
 			
