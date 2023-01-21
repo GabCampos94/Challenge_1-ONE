@@ -20,12 +20,12 @@
 		</header>
 
 		<main>
-			<section>
-				<textarea id="mensagem" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
+			<section >
+				<textarea autofocus id="mensagem" cols="41" rows="4" placeholder="Digite aqui seu texto..."></textarea>
 				
 		
 				<div class="orientacoes">
-					<h6>Apenas letras minúsculas e sem acento</h6>
+					<h6>Apenas letras minúsculas e sem acento.</h6>
 				</div> 
 					
 				<div>
@@ -63,9 +63,7 @@
 					
 						if (targetDiv.style.display !== "none"){
 							targetDiv.style.display = "none";
-						} else {
-							targetDiv.style.display = "block";
-						}
+						} 
 					
 					var targetBotton = document.getElementById("botao_copiar");	
 						if (targetBotton.style.position !== "absolute"){
@@ -84,10 +82,21 @@
 
 					
 
-
 				}
 				
 				function descripto(){
+					var targetDiv = document.getElementById("msg_inicial");
+					
+						if (targetDiv.style.display !== "none"){
+							targetDiv.style.display = "none";
+						} 
+
+					var targetBotton = document.getElementById("botao_copiar");	
+						if (targetBotton.style.position !== "absolute"){
+							targetBotton.style.position = "absolute";
+						}
+
+
 					var mensagem = window.document.getElementById("mensagem").value;	
 					var msg_descripto =	mensagem.replace(/enter/g, "e")
 							.replace(/imes/g, "i")

@@ -9,7 +9,7 @@
 
 
 body{
-	background-color: red ;
+	/*background-color: red ;*/
 }
 
 #logoAlura{
@@ -19,7 +19,7 @@ body{
 }
 
 main{
-	background-color: blue;
+	/*background-color: blue;*/
 	display: flex;
 	margin-bottom: 50px;
 	margin-left: 80px;
@@ -54,6 +54,7 @@ main{
 	padding-left: 20px;
 	position: fixed;
 	font-size: 32px;
+	resize: none;
 }
 
 #mensagem_resultado:focus{
