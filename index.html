@@ -6,28 +6,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<title>Decodificador de Texto</title>
-		<!--<link rel="stylesheet" href="reset.css">-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="stylesheet" href="style.css">
 	</head>
 
-
 	<body>
-
 		<header>
 			<img id="logoAlura" src="/imagens/logoAlura.png" alt="Logo da Alura">
 		</header>
-
 		<main>
 			<section >
 				<textarea autofocus id="mensagem" cols="41" rows="4" placeholder="Digite aqui seu texto..."></textarea>
-				
-		
 				<div class="orientacoes">
 					<h6>Apenas letras minúsculas e sem acento.</h6>
-				</div> 
-					
+				</div> 	
 				<div>
 					<button class="botoes" id="botao_cripto"  onclick="cripto()">Criptografar</button> 
 					<button class="botoes" id="botao_descripto" onclick="descripto()">Descriptografar</button>
@@ -35,23 +28,17 @@
 			</section>	
 		
 			<section>
-				
 					<textarea id="mensagem_resultado" cols="20" rows="10"></textarea>	
-					
-					<div id="msg_inicial">
-						
+					<div id="msg_inicial">						
 						<div id="imagem_inicial">							
 							<img id="imagem" src="/imagens/efeito.png" alt="imagem boneco pesquisando">
 						</div>
 
-
 						<div id="sub_mensagem_inicial">							
 							<h1>Nenhuma mensagem <br> encontrada</h1>	
 							<p>Digite um texto que você deseja <br> criptografar ou descriptografar.</p>
-						</div>
-												
-					</div> 
-								
+						</div>							
+					</div> 		
 					<button class="botoes" id="botao_copiar" onclick="copiar()">Copiar</button>
 				
 			</section>
@@ -60,16 +47,14 @@
 		<script>
 				function cripto(){
 					var targetDiv = document.getElementById("msg_inicial");
-					
 						if (targetDiv.style.display !== "none"){
 							targetDiv.style.display = "none";
 						} 
-					
+
 					var targetBotton = document.getElementById("botao_copiar");	
 						if (targetBotton.style.position !== "absolute"){
 							targetBotton.style.position = "absolute";
 						}
-
 
 					var mensagem = window.document.getElementById("mensagem").value;
 					var msg_cripto = mensagem.replace(/e/g, "enter")
@@ -78,15 +63,11 @@
 							.replace(/o/g, "ober")
 							.replace(/u/g, "ufat")
 								
-					document.querySelector("#mensagem_resultado").innerHTML = msg_cripto;
-
-					
-
+					document.querySelector("#mensagem_resultado").innerHTML = msg_cripto;			
 				}
 				
 				function descripto(){
 					var targetDiv = document.getElementById("msg_inicial");
-					
 						if (targetDiv.style.display !== "none"){
 							targetDiv.style.display = "none";
 						} 
@@ -95,7 +76,6 @@
 						if (targetBotton.style.position !== "absolute"){
 							targetBotton.style.position = "absolute";
 						}
-
 
 					var mensagem = window.document.getElementById("mensagem").value;	
 					var msg_descripto =	mensagem.replace(/enter/g, "e")
@@ -114,8 +94,6 @@
 					document.execCommand("copy"); /* Comando para copiar para a área de transferência */
 					
 				}	
-		</script>
-		
-			
+		</script>		
 	</body>
 </html>	
